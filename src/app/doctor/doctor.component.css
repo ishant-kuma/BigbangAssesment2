@@ -1,0 +1,13 @@
+button.active {
+    background-color: green;
+    color: white;
+}
+
+button.inactive {
+    background-color: red;
+    color: white;
+}
+.table {
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.466); /* Box shadow */
+}

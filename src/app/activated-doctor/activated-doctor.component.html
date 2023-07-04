@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container mt-4">
+    <h2>Activated Doctors List</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Doctor ID</th>
+                    <th>Doctor Name</th>
+                    <th>Specialty</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Is Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let doctor of activeDoctors">
+                    <td>{{ doctor.doctorId }}</td>
+                    <td>{{ doctor.name }}</td>
+                    <td>{{ doctor.specialty }}</td>
+                    <td>{{ doctor.address }}</td>
+                    <td>{{ doctor.phoneNumber }}</td>
+                    <td>{{ doctor.email }}</td>
+                    <td>{{ doctor.isActive ? 'Yes' : 'No' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

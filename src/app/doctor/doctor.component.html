@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <h3 class="mb-4">Doctors</h3>
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Specialty</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let doctor of doctors">
+                <td>{{ doctor.name }}</td>
+                <td>{{ doctor.specialty }}</td>
+                <td>{{ doctor.address }}</td>
+                <td>{{ doctor.phoneNumber }}</td>
+                <td>{{ doctor.email }}</td>
+                <td><span><button class="btn" [class.active]="doctor.isActive"
+                    [class.inactive]="!doctor.isActive" (click)="ChangeStatus(doctor.doctorId)">{{doctor.isActive ? 'active' :
+                    'inactive'}} </button></span></td>
+
+
+                <td>
+                    <button class="btn btn-sm btn-info" (click)="updateDoctor(doctor)">Update</button>
+                    <button class="btn btn-sm btn-danger" (click)="deleteDoctor(doctor.doctorId)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

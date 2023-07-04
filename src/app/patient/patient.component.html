@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container mt-4">
+    <h3 class="mb-4" style="margin-left: 43%; font-weight: 500;">Patient Registration Form</h3>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form [formGroup]="patientForm" (ngSubmit)="addPatient()">
+                <div class="form-group">
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" class="form-control" id="name" formControlName="name" required  style=" box-shadow: 0 0 5px 2px rgb(73, 66, 158); ">
+                </div><br>
+
+                <div class="form-group">
+                    <label for="age"><b>Age</b></label>
+                    <input type="number" class="form-control" id="age" formControlName="age" required  style=" box-shadow: 0 0 5px 2px rgb(73, 66, 158); ">
+                </div><br>
+
+                <div class="form-group">
+                    <label for="address"><b>Address</b></label>
+                    <input type="text" class="form-control" id="address" formControlName="address" required  style=" box-shadow: 0 0 5px 2px rgb(73, 66, 158); ">
+                </div><br>
+
+                <div class="form-group">
+                    <label for="phoneNumber"><b>Phone Number</b></label>
+                    <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" required style=" box-shadow: 0 0 5px 2px rgb(73, 66, 158); ">
+                </div><br>
+
+                <div class="form-group">
+                    <label for="medicalCondition"><b>Medical Condition</b></label>
+                    <input type="text" class="form-control" id="medicalCondition" formControlName="medicalCondition" required  style=" box-shadow: 0 0 5px 2px rgb(73, 66, 158); ">
+                </div><br>
+
+                <div class="form-group">
+                    <label for="doctorId"><b>DoctorId</b></label>
+                    <input type="number" class="form-control" id="doctorId" formControlName="doctorId" required  style=" box-shadow: 0 0 5px 2px rgb(73, 66, 158); ">
+                </div><br>
+
+                <button type="submit" class="btn btn-warning mt-3" style="margin-left: 40%;">Register Patient</button>
+            </form>
+        </div>
+    </div>
+</div>
